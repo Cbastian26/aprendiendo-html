@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--Esta etiqueta ayuda al buscador del navegador a clasificar el idioma de la página, mejorando su posicionamiento.-->
+
+<head>
+    <!--Define el conjunto de carácteres que se van a utilizar en el documento HTML, UTF-8 es el estándar (conjunto inglés).-->
+    <meta charset="UTF-8">
+
+    <!--Configuración añadida por visual studio code(microsoft) para que internet explorer reciba las mismas caracterñisticas que Edge. Una mierda.-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Define la proporción en la que este documento HTML será visualizado en el viewport del navegador. Importante para el responsive design.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Es importante que el título esté entre los 55 y 65 carácteres. Ayuda al SEO(search engine optimization.)-->
+    <title>Aprender HTML</title>
+
+    <!--No debe rebezar los 165 carácteres. Ayuda al SEO.-->
+    <meta name="description" content="Aquí se encuentra la información de como crear un HTML de forma óptima.">
+    <link rel="stylesheet" href="assets/estilosHTML.css">
+</head>
+
+<body>
+    <h2 id="inicio">Etiquetas HTML.</h2>
+    <hr> <!-- Separador semántico de contenidos.-->
+    <h2>Contenidos.</h2>
+    <ul>
+        <li type="square"><a href="index.html#encabezados-html">Encabezados HTML</a></li>
+        <li type="square"><a href="index.html#etiquetas-basicas-de-texto">Etiquetas básicas de texto.</a></li>
+        <li type="square"><a href="index.html#etiquetas-de-agrupacion-de-contenidos">Etiquetas de agrupación de contenidos</a></li>
+        <li type="square"><a href="index.html#etiquetas-de-formateo">Etiquetas de formateo</a></li>
+        <li type="square"><a href="index.html#etiquetas-de-estructuracion-(maquetacion)">Etiquetas de estructuración (maquetación)</a></li>
+        <li type="square"><a href="index.html#etiquetas-de-bloque-vs-etiquetas-de-linea">Etiquetas de Bloque vs Etiquetas de Línea</a></li>
+        <li type="square"><a href="index.html#estilos-en-html">Estilos en HTML</a></li>
+        <li type="square"><a href="index.html#scripts-en-html">Scripts en HTML</a></li>
+        <li type="square"><a href="index.html#imagenes">Imágenes</a></li>
+        <li type="square"><a href="index.html#figuras">Figuras</a></li>
+        <li type="square"><a href="index.html#sistas">Listas</a></li>
+        <li type="square"><a href="index.html#tablas">Tablas</a></li>
+        <li type="square"><a href="index.html#enlaces">Enlaces</a></li>
+        <li type="square"><a href="index.html#enlaces-y-protocolos-especiales">Enlaces y protocolos especiales</a></li>
+        <li type="square"><a href="index.html#elementos-interactivos">Elementos-interactivos</a></li>
+        <li type="square"><a href="index.html#audio-y-video">Audio y video</a></li>
+        <li type="square"><a href="index.html#"></a></li>
+        <li type="square"><a href="index.html#"></a></li>
+    </ul>
+    <hr>
+
+    <h2 id="encabezados-html">Encabezados HTML.</h2>
+    <h1>h1: Encabezado 1</h1>
+    <!--Por SEO, es mejor solo poner un h1 por documentlo HTML, son revisados por los crawlers.-->
+    <h2>h2: Encabezado 2</h2>
+    <h3>h3: Encabezado 3</h3>
+    <h4>h4: Encabezado 4</h4>
+    <h5>h5: Encabezado 5</h5>
+    <h6>h6: Encabezado 6</h6>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    
+    <h2 id="etiquetas-basicas-de-texto">Etiquetas básicas de texto.</h2>
+    <p><b>p:</b> En los párrafos se escribe texto. Se puede escribir texto sin etiqueta alguna también, pero no es ni
+        correcto ni conveniente. <br>
+        <b>b: Escribe en negritas.</b> <br>
+        <i><b>i:</b> Letras itálicas.</i> <br>
+        <u><b>u:</b> Subraya.</u> <br>
+        <b>sub:</b> H<sub>2</sub>O. <br>
+        <b>sup:</b> E = mc<sup>2</sup>. <br>
+        <mark><b>mark:</b> Marca texto.</mark> <br>
+        <small><b>small:</b> Letras pequeñas.</small> <br>
+        <b>strong:</b> Esta etiqueta define <strong>importancia</strong> en el texto. <br>
+        <b>em:</b> Esta etiqueta define <em>énfasis</em> en el texto. <br>
+        <b>backquote</b> y <b>cite:</b> <br>
+    <blockquote>If you want to improve, be content to be thought foolish and stupid.</blockquote>
+    <cite>Epictetus.</cite> <br>
+    </p>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="etiquetas-de-agrupacion-de-contenidos">Etiquetas de agrupación de contenidos.</h2>
+    <p>
+        <b>br:</b> Da saltos de línea. <br>
+        <b>hr:</b> Define un salto semántico de contenido a traves de una línea horizontal.
+    </p>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="etiquetas-de-formateo">Etiquetas de formateo.</h2>
+    <p>
+        <b>pre:</b> La etiqueta pre hace que se respete la indentación del texto escrita dentro. <br>
+        <b>code:</b> Le da formato código al texto escrito dentro.
+        <pre>
+            <code>
+
+            function messageMaker (type, style){
+                return function(str){
+                    console.log(`%c ${type}: ${str}`, style);
+                };
+            };
+
+            const info = messageMaker(`Info`, `background: blue; color: white`);
+            info(`Este es un ejemplo de como usar las etiquetas pre y code.`);
+            </code>
+        </pre>
+    </p>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="etiquetas-de-estructuracion-(maquetacion)">Etiquetas de estructuración (maquetación).</h2>
+    <p>Es importante tener en cuenta que <mark>el correcto uso de las etiquetas de estructuración es subjetivo</mark> hasta cierto punto,
+        adquiriendo la cualidad de ser siempre materia perfectible su aplicación en un sitio web.</p>
+    <div><b>div:</b> Etiqueta sin carga semántica de estructuración de contenido. Antes de HTML5 era la única etiqueta estructural.</div>
+    <header><b>head:</b> Etiqueta que contiene la cabecera del sitio web, o de una sección del sitio.</header>
+    <nav><b>nav:</b> Contiene los elementos que le permiten al usuario navegar por el sitio web.</nav>
+    <main><b>main:</b> Contiene el contenido principal del sitio web. Por SEO solo debe haber una etiqueta main por documento HTML.</main>
+    <aside><b>aside:</b> Contiene contenido complementario (secundario) en un sitio web, como la publicidad por ejemplo.</aside>
+    <section><b>section:</b> Contiene una sección de contenido.</section>
+    <article><b>article:</b> Contiene una seccion de contenido el cual se explica por si mismo, sin depender del contenido del
+         resto del sitio web.</article>
+    <footer><b>footer:</b> Define el pie de página de un sitio web o de una sección.</footer>
+    <address><b>adress:</b> Generalmente contiene una dirección o algun medio de contacto.</address>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="etiquetas-de-bloque-vs-etiquetas-de-linea">Etiquetas de Bloque vs Etiquetas de Línea.</h2>
+    <div style="background: rgb(215, 215, 167);" >Las etiquetas de bloque ocupan todo el largo de la linea en el contenedor donde
+        se encuentran, independientemente del tamaño de su contenido, por lo que generan saltos de linea.</div>
+    <span style="background: rgb(120, 120, 196); color: white;" >Las etiquetas en línea solo ocupan el espacio de acuerdo a su
+        contenido, por lo que no necesariamente generan saltos de línea.</span>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="estilos-en-html">Estilos en HTML.</h2>
+    <p>Hay 3 formas de añadir estilos a un documento HTML:<br>
+        <pre>
+            1.-<b>Estilos en línea:</b> Usando el atributo style.<br>
+            <code>
+                &ltspan style="background: rgb(120, 120, 196); color: white;"&gt&lt/span&gt
+            </code><br>
+            2.-<b>Estilos internos:</b> Añadiendo una etiqueta style, preferiblemente en el head.<br>
+            <code>
+                &ltstyle&gt
+                    span{
+                        background: rgb(120, 120, 196); 
+                        color: white;                       
+                    }
+                &lt/style&gt
+            </code><br>
+            3.-<b>Estilos externos:</b> Enlazando una hoja de estilos en el head. <mark>(Forma óptima)</mark>.<br>
+            <code>
+                &ltlink rel="stylesheet" href="estilosHTML.css"&gt
+            </code>
+        </pre></p>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="scripts-en-html">Scripts en HTML.</h2>
+    <p>Hay 2 formas de añadir scripts a un documento HTML:</p><br>
+    <pre>
+        1.-<b>Forma directa:</b> Añadiendo una etiqueta script al documento HTML.
+        <code>
+            &ltscript&gt
+                console.log(`Ejemplo de etiqueta script.`);
+            &lt/script&gt          
+        </code><br>
+        2.-<b>Forma indirecta:</b> Enlazando un archivo contenedor del script. De preferencia al final de la etiqueta body.
+           <mark>(Forma Óptima)</mark>
+        <code>
+            &ltscript src="scriptsHTML.js"&gt&lt/script&gt
+        </code>
+    </pre>
+    <script src="assets/scriptsHTML.js"></script>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="imagenes">Imágenes.</h2>
+    <img src="img/Ciudad.png" alt="Ciudad formato png.">
+    <img src="img/Ciudad.jpg" alt="Ciudad formato jpg.">
+    <img src="img/Ciudad.gif" alt="Ciudad formato gif.">
+    <img src="img/emo-devil-svgrepo-com.svg" alt="Devil SVG">
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+    
+    <h2 id="figuras">Figuras.</h2>
+    <figure>
+        <img src="img/periodic_table.jpg" alt="Tabla periódica de las etiquetas HTML.">
+        <figcaption>Tabla periódica de las etiquetas HTML.</figcaption> <!--Esto es opcional.-->
+    </figure>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="listas">Listas.</h2>
+    <h3>Listas ordenadas &ltol&gt&lt/ol&gt.</h3>
+    <ol>
+        <li>Verano.</li>
+        <li>Otoño.</li>
+        <li>Invierno.</li>
+        <li>Primavera.</li>
+    </ol>
+    <ol type="I" reversed>  <!--A los atributos como reversed, se les llama atributos booleanos. Si estan presentes, se tornan true.-->
+        <li>Verano.</li>
+        <li>Otoño.</li>
+        <li>Invierno.</li>
+        <li>Primavera.</li>
+    </ol>
+    <h3>Listas desordenadas &ltul&gt&lt/ul&gt.</h3>
+    <ul>
+        <li>Verano.</li>
+        <li>Otoño.</li>
+        <li>Invierno.</li>
+        <li>Primavera.</li>
+    </ul>
+    <ul type="circle">
+        <li>Verano.</li>
+        <li>Otoño.</li>
+        <li>Invierno.</li>
+        <li>Primavera.</li>
+    </ul>
+    <ul type="square">
+        <li>Verano.</li>
+        <li>Otoño.</li>
+        <li>Invierno.</li>
+        <li>Primavera.</li>
+    </ul>
+    <h3>Listas de Definición &ltdl&gt&lt/dl&gt.</h3>
+    <dl>
+        <dt>HTML:</dt>
+        <dd>HyperText Markup Language. Es un lenguaje de marcado que define la estructura del contenido dentro de un sitio web.</dd>
+        <dt>CSS:</dt>
+        <dd>Cascading Style Sheets. Es un lenguaje que añade estilos a un documento HTML.</dd>
+        <dt>JavaScript:</dt>
+        <dd>Es un lenguaje de programación que se utiliza en los navegadores web.</dd>
+    </dl>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="tablas">Tablas.</h2>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Personajes de Genshin Impact</th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Elemento</th>
+                <th>Categoría</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Arataki Itto</td>
+                <td>Geo</td>
+                <td>5 estrellas</td>
+            </tr>
+            <tr>
+                <td>Kusanali</td>
+                <td>Dendro</td>
+                <td>5 estrellas</td>
+            </tr>
+            <tr>
+                <td>Baal</td>
+                <td>Electro</td>
+                <td>5 estrellas</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3"><small>Hoyoverse vales callampa conchetumare</small></td>
+            </tr>
+        </tfoot>
+    </table>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="enlaces">Enlaces.</h2>
+    <p>
+        <pre>
+            <b>Enláces externos:</b> Redirigen a un sitio web externo.
+            <code>
+                &lta href="index.html"&gt&lt/a&gt
+                <a href="index.html">Index en la misma pestaña</a>
+            </code>
+            <code>
+                &lta href="index.html" target="_blank"&gt&lt/a&gt
+                <a href="index.html" target="_blank">Index en nueva pestaña por el atributo target</a>
+            </code>
+            <br>
+            <b>Enláces internos:</b> Redirigen a una sección del documento HTML actual.
+            <code>
+                &lta href="index.html#inicio"&gtRedirige al inicio del documento HTML&lt/a&gt
+                <a href="index.html#inicio">Redirige al inicio del documento HTML</a>
+            </code>
+        </pre>
+    </p>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="enlaces-y-protocolos-especiales">Enlaces y protocólos especiales.</h2>
+    <a href="mailto:hola@gmail.com">Envíar email</a>
+    <br>
+    <a href="tel:56912345678">Llamar por teléfono</a>
+    <br>
+    <a href="https://api.whatsapp.com/send?phone=0123456789&text=Hola">Mandar un mensaje por whatsapp</a>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+    
+    <h2 id="elementos-interactivos">Elementos interactivos.</h2>
+    <button onclick="alert(`Hola`)">Botón</button>    <!--Añadir funcionalidades en línea es una mala práctica.-->
+    <br><br>
+    <details>
+        <summary>Aquí va el título</summary>
+        <article>
+            <ol>
+                <li>Elementos dentro del acordeón</li>
+                <li>Elementos dentro del acordeón</li>
+                <li>Elementos dentro del acordeón</li>
+            </ol>
+            <img src="img/devil-laugh.png" alt="Devil Laugh">
+        </article>
+    </details>
+    <details open>  <!--El atributo open hace que el acordeón esté abierto por default.-->
+        <summary>Devil Woman</summary>
+        <img src="img/devil-woman.svg" alt="Devil Woman.">
+    </details>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="audio-y-video">Audio y vídeo.</h2>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+</body>
+</html>
