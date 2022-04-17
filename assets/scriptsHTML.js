@@ -1,1 +1,1 @@
-console.log(`Script enlazado correctamente.`)
+console.log(`Script enlazado correctamente.`);

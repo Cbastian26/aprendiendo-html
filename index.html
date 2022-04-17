@@ -35,12 +35,22 @@
         <li type="square"><a href="index.html#scripts-en-html">Scripts en HTML</a></li>
         <li type="square"><a href="index.html#imagenes">Imágenes</a></li>
         <li type="square"><a href="index.html#figuras">Figuras</a></li>
-        <li type="square"><a href="index.html#sistas">Listas</a></li>
+        <li type="square"><a href="index.html#listas">Listas</a></li>
         <li type="square"><a href="index.html#tablas">Tablas</a></li>
         <li type="square"><a href="index.html#enlaces">Enlaces</a></li>
         <li type="square"><a href="index.html#enlaces-y-protocolos-especiales">Enlaces y protocolos especiales</a></li>
         <li type="square"><a href="index.html#elementos-interactivos">Elementos-interactivos</a></li>
         <li type="square"><a href="index.html#audio-y-video">Audio y video</a></li>
+        <li type="square"><a href="index.html#iframe">iframes</a></li>
+        <li type="square">
+            <a href="index.html#formularios">Formularios</a>
+            <ul>
+                <li type="circle"><a href="index.html#elementos-de-formularios"><small>Elementos de Formularios</small></a></li>
+                <li type="circle"><a href="index.html#ejemplos-de-formularaios"><small>Ejemplos de Formularios</small></a></li>
+            </ul>
+        </li>
+        <li type="square"><a href="index.html#data-attributes">Data Attributes</a></li>
+        <li type="square"><a href="index.html#"></a></li>
         <li type="square"><a href="index.html#"></a></li>
         <li type="square"><a href="index.html#"></a></li>
     </ul>
@@ -61,8 +71,8 @@
 
     
     <h2 id="etiquetas-basicas-de-texto">Etiquetas básicas de texto.</h2>
-    <p><b>p:</b> En los párrafos se escribe texto. Se puede escribir texto sin etiqueta alguna también, pero no es ni
-        correcto ni conveniente. <br>
+    <p><b>p:</b> En los párrafos se escribe texto. Se puede escribir texto sin etiqueta alguna también,
+        pero no es ni correcto ni conveniente. <br>
         <b>b: Escribe en negritas.</b> <br>
         <i><b>i:</b> Letras itálicas.</i> <br>
         <u><b>u:</b> Subraya.</u> <br>
@@ -146,11 +156,11 @@
     <h2 id="estilos-en-html">Estilos en HTML.</h2>
     <p>Hay 3 formas de añadir estilos a un documento HTML:<br>
         <pre>
-            1.-<b>Estilos en línea:</b> Usando el atributo style.<br>
+            1.-<b>Estilos en línea:</b> Usando el atributo style.
             <code>
                 &ltspan style="background: rgb(120, 120, 196); color: white;"&gt&lt/span&gt
             </code><br>
-            2.-<b>Estilos internos:</b> Añadiendo una etiqueta style, preferiblemente en el head.<br>
+            2.-<b>Estilos internos:</b> Añadiendo una etiqueta style, preferiblemente en el head.
             <code>
                 &ltstyle&gt
                     span{
@@ -159,7 +169,7 @@
                     }
                 &lt/style&gt
             </code><br>
-            3.-<b>Estilos externos:</b> Enlazando una hoja de estilos en el head. <mark>(Forma óptima)</mark>.<br>
+            3.-<b>Estilos externos:</b> Enlazando una hoja de estilos en el head. <mark>(Forma óptima)</mark>.
             <code>
                 &ltlink rel="stylesheet" href="estilosHTML.css"&gt
             </code>
@@ -178,7 +188,7 @@
                 console.log(`Ejemplo de etiqueta script.`);
             &lt/script&gt          
         </code><br>
-        2.-<b>Forma indirecta:</b> Enlazando un archivo contenedor del script. De preferencia al final de la etiqueta body.
+        2.-<b>Forma indirecta:</b> Enlazando un archivo contenedor del script. De preferencia al finalde la etiqueta body.
            <mark>(Forma Óptima)</mark>
         <code>
             &ltscript src="scriptsHTML.js"&gt&lt/script&gt
@@ -219,7 +229,8 @@
         <li>Invierno.</li>
         <li>Primavera.</li>
     </ol>
-    <ol type="I" reversed>  <!--A los atributos como reversed, se les llama atributos booleanos. Si estan presentes, se tornan true.-->
+    <!--A los atributos como reversed, se les llama atributos booleanos. Si estan presentes, se tornan true.-->
+    <ol type="I" reversed> 
         <li>Verano.</li>
         <li>Otoño.</li>
         <li>Invierno.</li>
@@ -247,7 +258,9 @@
     <h3>Listas de Definición &ltdl&gt&lt/dl&gt.</h3>
     <dl>
         <dt>HTML:</dt>
-        <dd>HyperText Markup Language. Es un lenguaje de marcado que define la estructura del contenido dentro de un sitio web.</dd>
+        <dd>HyperText Markup Language. Es un lenguaje de marcado que define la estructura del contenido 
+            dentro de un sitio web.
+        </dd>
         <dt>CSS:</dt>
         <dd>Cascading Style Sheets. Es un lenguaje que añade estilos a un documento HTML.</dd>
         <dt>JavaScript:</dt>
@@ -328,7 +341,9 @@
     <br>
     <a href="tel:56912345678">Llamar por teléfono</a>
     <br>
-    <a href="https://api.whatsapp.com/send?phone=0123456789&text=Hola">Mandar un mensaje por whatsapp</a>
+    <a href="https://api.whatsapp.com/send?phone=0123456789&text=Hola" 
+        target="_blank">Mandar un mensaje por whatsapp
+    </a>
     <br>
     <a href="index.html#inicio">
         <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
@@ -336,7 +351,8 @@
     <hr>
     
     <h2 id="elementos-interactivos">Elementos interactivos.</h2>
-    <button onclick="alert(`Hola`)">Botón</button>    <!--Añadir funcionalidades en línea es una mala práctica.-->
+    <!--Añadir funcionalidades en línea es una mala práctica.-->
+    <button onclick="alert(`Hola`)">Botón</button>
     <br><br>
     <details>
         <summary>Aquí va el título</summary>
@@ -360,6 +376,177 @@
     <hr>
 
     <h2 id="audio-y-video">Audio y vídeo.</h2>
+    <audio src="media/mario-bros-tuberia.mp3" controls preload></audio>
+    <br>
+    <video src="media/into-the-darkness-the-indians.mp4" controls preload"></video>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="iframe">Iframes.</h2>
+    <!--No abusar de los iframes. Se recomienda tener uno por documento HTML. Pueden ocurrir problemas de carga.-->
+    <iframe src="media/emmet-cheat-sheet.pdf" frameborder="0"></iframe>
+    <br>
+    <iframe src="https://eloquentjavascript.net/" frameborder="0"></iframe>
+    <br>
+    <!--Hay sitios que bloquean la petición de la etiqueta iframe.-->
+    <iframe src="https://www.facebook.com/" frameborder="0"></iframe>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MPLN1ahXgcs" title="YouTube video player"
+       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+       allowfullscreen>
+    </iframe>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="formularios">Formularios.</h2>
+    <h3 id="elementos-de-formularios">Elementos de formularios.</h3>
+    <input type="text">
+    <br>
+    <input type="checkbox">
+    <br>
+    <input type="radio">
+    <br>
+    <input type="date">
+    <br>
+    <input type="color">
+    <br>
+    <input type="button" value="Button">
+    <br>
+    <input type="submit">
+    <br>
+    <input type="reset">
+    <br>
+    <input type="file">
+    <br>
+    <input type="file" multiple>
+    <br>
+    <input type="hidden" name="idioma" value="es">
+    <br>
+    <input type="email">
+    <br>
+    <input type="number">
+    <br>
+    <input type="tel">
+    <br>
+    <input type="password">
+    <br>
+    <input type="search">
+    <br>
+    <textarea cols="30" rows="6"></textarea>
+    <br>
+    <select>
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+        <option value="">JS</option>
+        <option value="">PHP</option>
+        <option value="">PYTHON</option>
+    </select>
+    <br>
+    <select multiple>
+        <option value="">HTML</option>
+        <option value="">CSS</option>
+        <option value="">JS</option>
+        <option value="">PHP</option>
+        <option value="">PYTHON</option>
+    </select>
+    <br>
+    <h3 id="ejemplos-de-formularaios">Ejemplos de Formularios.</h3>
+    <input type="text" value="Cbastián" readonly disabled>
+    <br>
+    <input type="text" placeholder="Nombre">
+    <br>
+    <h4>Formulario de log in</h4>
+    <!--Con el metodo GET se pasan los datos del form mediante la URL, es menos seguro que POST.-->
+    <form action="" method="POST" autocomplete="off">
+        <label for="user">User:</label>
+        <input type="text" name="user" id="user" placeholder="User" required pattern="^[A-Za-z]+$" title="Sólo puede contener letras.">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Email">
+        <br>
+        <!--Con el valor email en el atributo name se detectan todos los registros anteriores de dicho atributo.-->
+        <!--<input type="text" name="email" autocomplete="off">-->
+        <br>
+        <input type="submit">
+        <br>
+        <input type="reset">
+    </form>
+    <h4>Selects, Radios y Check-box.</h4>
+    <form action="">
+        <p>Elige tu idioma.</p>
+        <select name="idioma" required>
+            <option value="">Selecciona una opción</option>
+            <option value="es">Español</option>
+            <option value="en" selected>Inglés</option>
+            <option value="it">Italiano</option>
+            <option value="fr">Francés</option>
+            <option value="pt">Portugués</option>
+        </select>  
+        <br>
+        <p>Selecciona tu lenguaje de programación favorito.</p>
+        <input type="radio" id="radio-js" name="lenguaje" value="js" required>
+        <label for="radio-js">JavaScript</label>
+        <input type="radio" id="radio-php" name="lenguaje" value="php" checked>
+        <label for="radio-php">PHP</label>
+        <input type="radio" id="radio-py" name="lenguaje" value="py">
+        <label for="radio-py">Python</label>
+        <br>
+        <p>Elige tus intereses.</p>
+        <label for="">
+            <input type="checkbox" name="intereses" value="deportes" checked>
+            Deportes
+        </label>
+        <label for="">
+            <input type="checkbox" name="intereses" value="economia" checked>
+            Economía
+        </label>
+        <label for="">
+            <input type="checkbox" name="intereses" value="ciencia"> 
+            Ciencia
+        </label>
+        <label for="">
+            <input type="checkbox" name="intereses" value="arte" checked>
+            Arte
+        </label>
+        <br>
+        <input type="submit">
+        <br>
+        <input type="reset">     
+    </form>
+    <h4>Formulario de contacto.</h4>
+    <form action="https://formsubmit.co/cbastian.ctm@gmail.com" method="POST" autocomplete="off">
+        <input type="text" name="nombre" placeholder="Nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required
+        title="Este campo solo acepta letras y espaciados.">
+        <br>
+        <input type="email" name="email" placeholder="Correo electrónico" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+        title="Formato de correo electrónico no válido.">
+        <br>
+        <textarea name="comentario" cols="30" rows="10" placeholder="Escriba un comentario" required></textarea>
+        <br>
+        <input type="submit">
+    </form>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="data-attributes">Data Attributes.</h2>
+    <ul>
+        <li data-id="1" data-name="summer">Verano</li>
+        <li data-id="2" data-name="autumn">Otoño</li>
+        <li data-id="3" data-name="winter">Invierno</li>
+        <li data-id="4" data-name="spring">Primavera</li>
+    </ul>
     <a href="index.html#inicio">
         <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
     </a>
