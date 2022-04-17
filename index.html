@@ -18,6 +18,10 @@
     <!--No debe rebezar los 165 carácteres. Ayuda al SEO.-->
     <meta name="description" content="Aquí se encuentra la información de como crear un HTML de forma óptima.">
     <link rel="stylesheet" href="assets/estilosHTML.css">
+    <link rel="canonical" href="https://www.dominio.com/la-url-canonica">
+    <link rel="icon" href="img/icon-HTML.png">
+    <link rel="apple-touch-icon" href="img/icon-HTML.png">
+    <meta name="theme-color" content="000000">
 </head>
 
 <body>
@@ -50,9 +54,9 @@
             </ul>
         </li>
         <li type="square"><a href="index.html#data-attributes">Data Attributes</a></li>
-        <li type="square"><a href="index.html#"></a></li>
-        <li type="square"><a href="index.html#"></a></li>
-        <li type="square"><a href="index.html#"></a></li>
+        <li type="square"><a href="index.html#meta-seo-moviles">Meta etiquetas para SEO y Móviles</a></li>
+        <li type="square"><a href="index.html#meta-redes">Meta etiquetas para R.R.S.S. (Open Graph Protocol)</a></li>
+        <li type="square"><a href="index.html#accesibilidad-web">Accesibilidad Web</a></li>
     </ul>
     <hr>
 
@@ -528,7 +532,7 @@
         title="Este campo solo acepta letras y espaciados.">
         <br>
         <input type="email" name="email" placeholder="Correo electrónico" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
-        title="Formato de correo electrónico no válido.">
+        title="Formato de correo electrónico no válido." required>
         <br>
         <textarea name="comentario" cols="30" rows="10" placeholder="Escriba un comentario" required></textarea>
         <br>
@@ -551,5 +555,85 @@
         <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
     </a>
     <hr>
+
+    <h2 id="meta-seo-moviles">Meta etiquetas para SEO y Móviles.</h2>
+    <pre><b>Etiqueta title:</b>
+            
+         <code>&lttitle&gtAprender HTML&lt/title&gt</code>
+    </pre>
+    <pre><b>Etiqueta meta-description:</b>
+            
+        <code>&ltmeta name="description" content="Aquí va una breve descripción del sitio web que contiene el HTML."&gt</code>
+    </pre>
+    <pre><b>Etiqueta link-"canonical":</b>
+            
+        <code>&ltlink rel="canonical" href="https://www.dominio.com/la-url-canonica"&gt</code>
+    </pre>
+    <!--Preferiblemente las imágenes íconos deben ser formato png y perfectamente cuadradas.-->
+    <pre><b>Etiqueta link-"icon":</b>
+            
+        <code>&ltlink rel="icon" href="img/icon-HTML.png""&gt</code>
+    </pre>
+    <!--Para que el icono no pierda calidad en dispositivos móviles se recomienda tenga una resolución alta.-->
+    <pre><b>Etiqueta link-"apple-touch-icon":</b>
+            
+        <code>&ltlink rel="apple-touch-icon" href="img/icon-HTML.png"&gt</code>
+    </pre>
+    <pre><b>Etiqueta meta-"theme-color":</b>
+            
+        <code>&ltmeta name="theme-color" content="000000"&gt</code>
+    </pre>
+    <br>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="meta-redes">Meta etiquetas para R.R.S.S. (Open Graph Protocol).</h2>
+    <pre><b>Etiqueta og:title</b>
+            
+        <code>&lmeta property="og:title" content="Aprender HTML"&gt</code>
+    </pre>
+    <pre><b>Etiqueta og:description</b>
+            
+        <code>&ltmeta property="og:description"  content="Aquí se encuentra la información de como crear un HTML de forma óptima."&gt</code>
+    </pre>
+    <pre><b>Etiqueta og:image</b>
+        <!--El dominio de estas etiquetas debe ser el "absoluto" en internet, no el relativo local del documento-->    
+        <code>&ltmeta property="og:image"  content="https://www.dominio.com/img/periodic_table.jpg"&gt</code>
+    </pre>
+    <pre><b>Etiqueta og:url</b>
+            
+        <code>&ltmeta property="og:url"  content="https://www.dominio.com/index.html"&gt</code>
+    </pre>
+    <h3>Para Twitter.</h3>
+    <pre><b>Etiqueta twitter-card</b>
+            
+        <code>&ltmeta name="twitter:card"  content="summary"&gt</code>
+    </pre>
+    <pre><b>Etiqueta twitter-site</b>
+            
+        <code>&ltmeta name="twitter:site"  content="@sometwitter"&gt</code>
+    </pre>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
+    <hr>
+
+    <h2 id="accesibilidad-web">Accesibilidad Web.</h2>
+    <h3 role="title">Días de la semana.</h3>
+    <ul role="list">
+        <li tabindex="1" role="listitem">Lunes</li>
+        <li tabindex="2" role="listitem">Martes</li>
+        <li tabindex="3" role="listitem">Miércoles</li>
+        <li tabindex="4" role="listitem">Jueves</li>
+        <li tabindex="5" role="listitem">Viernes</li>
+        <li tabindex="7" role="listitem">Sábado</li>
+        <li tabindex="6" role="listitem">Domingo</li>
+    </ul>
+    <a role="link" aria-label="En este link encontrarás más información acerca de los días de la semana." href="cualquiercosa"></a>
+    <a href="index.html#inicio">
+        <img class="inicioButton" src="img/up-arrow-square-black.svg" alt="Up Arrow">
+    </a>
 </body>
 </html>
